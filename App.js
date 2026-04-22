@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import {Eye, CircleQuestionMark, UserPen, ImagePlus, BanknoteArrowUp, QrCode, Barcode, ChevronRight, Smartphone, CreditCard} from 'lucide-react-native';
+import {Eye, CircleQuestionMark, UserPen, ImagePlus, BanknoteArrowUp, QrCode, Barcode, ChevronRight, Smartphone, CreditCard, PackagePlus} from 'lucide-react-native';
 
 export default function App() {
   return (
@@ -39,6 +39,10 @@ export default function App() {
         <View style={styles.cards}>
           <View style={styles.credito}><CreditCard/></View>
           <Text style={styles.cardText}>Meus cartões</Text>
+        </View>
+        <View style={styles.cards2}>
+          <View style={styles.box}><PackagePlus /></View>
+          <Text style={styles.cardText2}>Caixinhas</Text>
         </View>
       </View>
       <StatusBar style="auto" />
@@ -154,7 +158,7 @@ const styles = StyleSheet.create({
     left: '5vw',
     top: '5vh',
     backgroundColor: '#4b4949',
-    paddingLeft: '16vw'
+    paddingLeft: '16vw',
   },
   cardText:{
     color: '#ffffff',
@@ -166,6 +170,27 @@ const styles = StyleSheet.create({
     left: '5vw',
     top: '3vh',
     color: '#ffffff'
-  }
+  },
+  cards2:{
+    width: '90vw',
+    height: '10vh',
+    borderRadius: '8px',
+    position: 'relative',
+    left: '5vw',
+    top: '10vh',
+    backgroundColor: '#4b4949',
+    paddingLeft: '16vw',
+  },
+  cardText2:{
+    color: '#ffffff',
+    fontSize: 18,
+    marginTop: '3vh',
+  },
+  box:{
+    position: 'absolute',
+    left: '5vw',
+    top: '3vh',
+    color: '#ffffff'
+  },
 }
 );
